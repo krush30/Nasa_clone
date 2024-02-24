@@ -6,6 +6,7 @@ import { useDispatch } from 'react-redux';
 import { auth } from './utils/firebase';
 import { onAuthStateChanged } from 'firebase/auth';
 import { addData } from './utils/appSlice';
+import MarsIMG from './MarsIMG';
 
 const Body = () => {
     const appRouter = createBrowserRouter([
@@ -16,6 +17,9 @@ const Body = () => {
         {
             path: "/home",
             element: <Home />
+        }, {
+            path: "/mars",
+            element: <MarsIMG />
         }
     ]);
     const dispatch = useDispatch();
