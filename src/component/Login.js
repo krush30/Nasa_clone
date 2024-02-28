@@ -6,7 +6,8 @@ import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
     const navigate = useNavigate();
-    const [errorMessage, setErrorMessage] = useState(null);
+    const [errormessage, setErrorMessage] = useState(null);
+    const [apiError, setApiError] = useState(null);
     const email = useRef(null);
     const password = useRef(null);
 
@@ -36,6 +37,8 @@ const Login = () => {
                 .catch((error) => {
                     const errorCode = error.code;
                     const errorMessage = error.message;
+
+                    setApiError("Please enter correct password or email ");
                     // ..
                 });
         } else {
@@ -52,6 +55,10 @@ const Login = () => {
                 .catch((error) => {
                     const errorCode = error.code;
                     const errorMessage = error.message;
+                    setApiError("Please enter correct password or email ");
+
+
+
                 });
         }
 
@@ -81,7 +88,7 @@ const Login = () => {
                     className='my-2 p-4 w-full bg-black bg-opacity-80'
                     type='password'
                     placeholder='password' />
-                <p>{errorMessage}</p>
+                <p>{apiError}</p>
                 <button className='p-4 my-7 text-white bg-red-600 rounded-lg w-full'
                     onClick={SubmitClicked}>Submit</button>
                 <button onClick={handleSignin}>{isitSignin ? "don't have an account, Sign up" : "already have an account, Sign in"} </button>

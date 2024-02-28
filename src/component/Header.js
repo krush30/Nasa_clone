@@ -48,15 +48,20 @@ const Header = () => {
 
             </div>
 
-            <div className='flex-shrink-0'>
+            <div className='' style={{
+                height: 50,
+                position: "absolute",
+                top: 20,
+                left: "17%"
+            }}>
                 <input type='text' placeholder='search...' className='bg-black border-gray-600 my-5 mx-1' />
             </div>
 
             <p></p>
-            <div><img className=' w-20 mx-auto md:mx-0' src='https://www.nasa.gov/wp-content/themes/nasa/assets/images/nasa-logo.svg'
+            <div><img className='absolute left-[47%] w-20 mx-auto md:mx-0' src='https://www.nasa.gov/wp-content/themes/nasa/assets/images/nasa-logo.svg'
                 alt='logo' /></div>
-            <div className='flex font-bold text-xl py-5 px-1 text-white'>
-                <h1 className=' px-2'>New & Events</h1>
+            <div className='flex h-50px font-bold text-xl py-5 px-1 text-white'>
+                <h1 className=' px-2 min-w-[150px]'>New & Events</h1>
                 <h1 className=' px-2'>Multimedia</h1>
                 <h1 className=' px-2'>Nasa+</h1>
             </div>
