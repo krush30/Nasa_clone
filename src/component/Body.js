@@ -7,6 +7,7 @@ import { auth } from './utils/firebase';
 import { onAuthStateChanged } from 'firebase/auth';
 import { addData } from './utils/appSlice';
 import MarsIMG from './MarsIMG';
+import TechTransfer from './TechTransfer';
 
 const Body = () => {
     const appRouter = createBrowserRouter([
@@ -20,6 +21,10 @@ const Body = () => {
         }, {
             path: "/mars",
             element: <MarsIMG />
+        },
+        {
+            path: "/techtransfer",
+            element: <TechTransfer />
         }
     ]);
     const dispatch = useDispatch();

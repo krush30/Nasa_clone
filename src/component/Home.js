@@ -4,6 +4,8 @@ import MainComponent from './MainComponent';
 import SecondaryComp from './SecondaryComp';
 import Thirdcomp from './Thirdcomp';
 import FourthComp from './FourthComp';
+import FifthComp from './FifthComp';
+import SixComp from './SixComp';
 
 const Home = () => {
     return (
@@ -13,6 +15,8 @@ const Home = () => {
             <SecondaryComp />
             <Thirdcomp />
             <FourthComp />
+            <FifthComp />
+            <SixComp />
 
         </div>
     )
