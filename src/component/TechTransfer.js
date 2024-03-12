@@ -1,7 +1,8 @@
 import React from 'react'
 
-const TechTransfer = ({ imgdata }) => {
-    console.log(imgdata);
+const TechTransfer = ({ data }) => {
+    console.log(data)
+
     return (
         <div>
 

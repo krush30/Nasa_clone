@@ -49,8 +49,8 @@ const SixComp = () => {
                     <button className='font-semibold mt-1 ml-1 bg-red-600 text-white rounded-lg' onClick={handleClicked}>Show</button>
                 </div>
             </div>
-            {techtransfer.map((item) => <TechTransfer imgdata={item} />)
-            }
+            {/* {techtransfer.map(item => <TechTransfer data={item} />)} */}
+            <TechTransfer data={techtransfer} />
 
 
 
